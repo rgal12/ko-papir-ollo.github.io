@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 600px;
+    background-image: url('./photos/index/background.jpg');  /* Háttérkép elérési útja */
+    background-size: cover;  /* A kép kitölti az egész területet */
+    background-position: center;  /* Kép középre igazítása */
+    background-repeat: no-repeat;  /* A kép ne ismétlődjön */
+    background-attachment: fixed; /* Fixálja a háttérképet */
+    height: 100vh; /* A teljes nézetmagasságot lefedi */
+    margin: 0; /* Nincs margó */
+    padding: 0;
+    overflow: hidden;
+}
+
+#main_title{
+    color: rgb(185, 219, 15);
+    /*background-color:rgba(15, 93, 219);*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgb(219, 15, 76);   
+}
+
+#text{
+    background-color: purple;
+    color: white;
+    width: 300px;   /* Szélesség */
+    height: 40px;
+    font-size: 25px;   
+}
+
+.photo {
+    width: 200px !important; /* Kényszerítve lesz a szélesség */
+    height: 200px !important; /* Kényszerítve lesz a magasság */
+    object-fit: cover; /* Ha a kép nagyobb, akkor kitölti a dobozt */
+}
+
+#pic1{
+    position: absolute;
+    top: 380px;
+    margin-left: 400px;
+}
+
+#pic2{
+    position: absolute;
+    top: 380px;
+    margin-left: 665px;
+}
+
+#pic3{
+    position: absolute;
+    top: 380px;
+    margin-left: 930px;
+}
+
+#game{
+    color: rgb(185, 219, 15);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    position: absolute;
+    top: 600px;
+    margin-left: 670px;
+    text-shadow: 3px 3px 10px rgb(219, 15, 76);
+    font-weight: bold;
+    background-color: rgb(200, 9, 184); /* Háttérszín */
+    padding: 10px 20px; /* Belső tér (felül-alul, balra-jobbra) */
+    display: inline-block;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+}
+
+#game:hover {
+    background-color: darkblue;
+    transform: scale(1.1); /* 10%-kal nagyobb lesz */
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kő-papír-olló Játék</title>
+    <link rel="stylesheet" href="game.css">
+    <style>
+        .highlight {
+            border: 4px solid red;
+            box-shadow: 0 0 10px red;
+        }
+    </style>
+</head>
+<body>
+    <a href="./index.html"><h3 id="back">Vissza a főoldalra</h3></a>
+    <p id="points"></p>
+    <p id="winner" class="result"></p>
+    <p id="draw" class="result"></p>
+    <p id="loser" class="result"></p>
+
+    <div>
+        <img src="./photos/index/rock.jpg" alt="Kő" class="photo" id="pic1">
+        <img src="./photos/index/paper.jpg" alt="Papír" class="photo" id="pic2">
+        <img src="./photos/index/scissors.jpg" alt="Olló" class="photo" id="pic3">
+    </div>
+
+    <p id="vs">VS</p>
+
+    <div>
+        <img src="./photos/index/rock.jpg" alt="Kő" class="photo" id="pic11" onclick="getRock()">
+        <img src="./photos/index/paper.jpg" alt="Papír" class="photo" id="pic22" onclick="getPaper()">
+        <img src="./photos/index/scissors.jpg" alt="Olló" class="photo" id="pic33" onclick="getScissors()">
+    </div>
+
+    <p id="choose">Válassz</p>
+    <button id="newgame" onclick="newGame()">Új játék</button>
+    <p id="result12"></p>
+
+    
+    
+    <script src="./sricpt.js"></script>
+</body>
+</html>
