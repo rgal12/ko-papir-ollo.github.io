@@ -76,3 +76,12 @@ body {
     transform: scale(1.1); /* 10%-kal nagyobb lesz */
 }
 
+@media (max-width: 600px) {
+    div {
+        flex-direction: column;
+    }
+    .photo {
+        width: 80px;
+        height: 80px;
+    }
+}
