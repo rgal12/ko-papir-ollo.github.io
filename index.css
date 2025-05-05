@@ -1,81 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    min-height: 100vh;
-    background-image: url('./photos/index/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Times New Roman', Times, serif;
-    overflow-x: hidden;
+    margin: 0;
+    height: 600px;
+    background-image: url('./photos/index/background.jpg');  /* Háttérkép elérési útja */
+    background-size: cover;  /* A kép kitölti az egész területet */
+    background-position: center;  /* Kép középre igazítása */
+    background-repeat: no-repeat;  /* A kép ne ismétlődjön */
+    background-attachment: fixed; /* Fixálja a háttérképet */
+    height: 100vh; /* A teljes nézetmagasságot lefedi */
+    margin: 0; /* Nincs margó */
+    padding: 0;
+    overflow: hidden;
+}
+
+#main_title{
     color: rgb(185, 219, 15);
-}
-
-/* Cím */
-#main_title {
-    font-size: 6vw;
+    /*background-color:rgba(15, 93, 219);*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
     text-align: center;
-    text-shadow: 3px 3px 10px rgb(219, 15, 76);
-    margin-top: 30px;
+    text-shadow: 3px 3px 10px rgb(219, 15, 76);   
 }
 
-/* Szövegdoboz */
-#text {
+#text{
     background-color: purple;
     color: white;
-    width: 300px;
+    width: 300px;   /* Szélesség */
     height: 40px;
-    font-size: 25px;
-    margin: 20px auto;
-    display: block;
-}
-
-/* Képek konténerben, középen */
-.image-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 50px auto;
+    font-size: 25px;   
 }
 
 .photo {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    width: 200px !important; /* Kényszerítve lesz a szélesség */
+    height: 200px !important; /* Kényszerítve lesz a magasság */
+    object-fit: cover; /* Ha a kép nagyobb, akkor kitölti a dobozt */
 }
 
-.photo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+#pic1{
+    position: absolute;
+    top: 380px;
+    margin-left: 400px;
 }
 
-/* Játék indítása gomb */
-#game {
-    font-size: 3vw;
+#pic2{
+    position: absolute;
+    top: 380px;
+    margin-left: 665px;
+}
+
+#pic3{
+    position: absolute;
+    top: 380px;
+    margin-left: 930px;
+}
+
+#game{
+    color: rgb(185, 219, 15);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    position: absolute;
+    top: 600px;
+    margin-left: 670px;
+    text-shadow: 3px 3px 10px rgb(219, 15, 76);
     font-weight: bold;
-    background-color: rgb(200, 9, 184);
-    padding: 10px 20px;
+    background-color: rgb(200, 9, 184); /* Háttérszín */
+    padding: 10px 20px; /* Belső tér (felül-alul, balra-jobbra) */
+    display: inline-block;
     border-radius: 15px;
     cursor: pointer;
-    display: block;
-    margin: 40px auto;
-    text-align: center;
-    text-shadow: 3px 3px 10px rgb(219, 15, 76);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    max-width: fit-content;
+
 }
 
 #game:hover {
     background-color: darkblue;
-    transform: scale(1.1);
+    transform: scale(1.1); /* 10%-kal nagyobb lesz */
 }
 
-/* Kisebb képernyőkhöz */
-@media (
+@media (max-width: 600px) {
+    div {
+        flex-direction: column;
+    }
+    .photo {
+        width: 80px;
+        height: 80px;
+    }
+}
